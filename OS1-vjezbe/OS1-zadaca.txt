@@ -15,3 +15,13 @@ mkdir vjezba3 && mkdir vjezba3/backup && cd vjezba3 && touch notes.txt todo.txt 
 Zadatak 4.
 
 mkdir vjezba4 && mkdir vjezba4/subfolder && cd vjezba4 && touch $HOSTNAME && mv $HOSTNAME $USER && mv $USER ./subfolder && cd .. && rm /c/Users/Administrator/Documents/GitHub/FIPU-OS/OS1-zadace/vjezba4/subfolder/$USER
+
+Zadatak 5.
+
+mkdir vjezba5 && cd vjezba5 && touch $RANDOM.num
+ls
+cp *.num backup.num && mkdir backup && mv backup.num backup
+
+Zadatak 6.
+
+mkdir /c/Users/Administrator/Documents/vjezba6 && cd /c/Users/Administrator/Documents/vjezba6 && touch os_script.md notes.txt && mkdir scripts && mv os_script.md scripts && mv notes.txt todo.txt && cd scripts && rm ../todo.txt
