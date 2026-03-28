@@ -1,5 +1,5 @@
 cd /c/Users/Administrator/Documents/GitHub/FIPU-OS
-mkdir vjezba_2
+mkdir -p vjezba_2
 git add .
 git commit -m "Riješen zadatak 1"
 git push
