@@ -1,0 +1,31 @@
+touch compress.sh
+chmod +x compress.sh
+cat > compress.sh << 'EOF2'
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "Greška: potrebno je proslijediti točno 2 argumenta."
+    exit 1
+fi
+
+if [ ! -d "$1" ]; then
+    echo "Greška: direktorij za komprimiranje ne postoji."
+    exit 2
+fi
+
+if [ -e "$2" ]; then
+    echo "Greška: izlazna datoteka već postoji."
+    exit 3
+fi
+
+zip -j -r "$2" "$1"
+
+if [ $? -eq 0 ]; then
+    echo "Arhiva je uspješno stvorena."
+else
+    echo "Greška pri komprimiranju."
+    exit 4
+fi
+EOF2
+chmod +x compress.sh
+./compress.sh /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid/zadatak_2 /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid/zadatak_4/arhiva.zip

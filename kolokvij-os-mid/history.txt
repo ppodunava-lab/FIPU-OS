@@ -1,0 +1,128 @@
+    1  mkdir project
+    2  cd project
+    3  mkdir src tests
+    4  touch main.py README.md src/module1.py src/module.py
+    5* cp src/module1.py tests/test_module1.py; cp src/module2.py tests/test_module2.py
+    6  cp src/module2.py tests/test_module2.py
+    7  cp src/module1.py tests/test_module1.py; cp src/module1.py tests/test_module2.py; mv main.py src/; touch .gitignore; echo "*.pyc" > .gitignore; echo "HOST=$HOSTNAME" > src/.env; ls -laht; rm -f test/*
+    8  cd ..
+    9  nano rjesenje_1.txt
+   10  cd ..
+   11  mkdir zadatak_2; cd zadatak_2
+   12  mkdir "$HOSTNAME"; cd "$HOSTNAME"
+   13  mkdir Desktop Documents Downloads .Thrash
+   14  echo -e "# Zadaca iz OS\nOvo je zadaca iz OS-a" > Downloads/zadaca.md.crdownload
+   15  mkdir -p Document/faks/os/kolokvij
+   16  mv Downloads/zadaca.md.crdownload Documents/faks/os/kolokvij/zadaca.md
+   17  mv Downloads/zadaca.md.crdownload Document/faks/os/kolokvij/zadaca.md
+   18  mv Document Documents
+   19  echo "kraj" >> Documents/faks/os/kolokvij/zadaca.md
+   20  mkdir -p Documents/faks/os/kolokvij
+   21  mv Downloads/zadaca.md.crdownload Document/faks/os/kolokvij/zadaca.md
+   22  mv Documents/Document/faks/os/kolokvij/zadaca.md Documents/faks/os/kolokvij/
+   23  rmdir Documents/Document/faks/os/kolokvij
+   24  rmdir Documents/Document/faks/os
+   25  rmdir Documents/Document/faks
+   26  rmdir Documents/Document
+   27  echo "kraj" >> Documents/faks/os/kolokvij/zadaca.md
+   28  cat Documents/faks/os/kolokvij/zadaca.md
+   29  cd Documents/faks/os/kolokvij
+   30  mv zadaca.md ../../../../.Thrash/cd Documents/faks/os/kolokvij
+   31  mv zadaca.md ../../../../.Thrash/
+   32  cd Documents/faks/os/kolokvij
+   33  mv zadaca.md ../../../../.Thrash/
+   34  pwd
+   35  ls
+   36  mv zadaca.md ../../../../.Thrash/
+   37  [200~find /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid/zadatak_2 -name "zadaca.md"~
+   38  find /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid/zadatak_2 -name "zadaca.md"
+   39  cd ../../../../.Thrash
+   40  ls
+   41  cd ../Desktop
+   42  touch tajno.txt os_skripta.docx sifre.txt
+   43  mv *.txt ../Documents/
+   44  cd ..
+   45  ls -R --color=auto
+   46  cd ..
+   47  nano rjesenje_2.txt
+   48  cd /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid/zadatak_2
+   49  nano rjesenje_2.txt
+   50  cd /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid
+   51  mkdir zadatak_3
+   52  cd zadatak_3
+   53  touch skripta.sh rjesenje_3.txt
+   54  chmod +x skripta.sh
+   55  nano skripta.sh
+   56  ./skripta.sh /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid/zadatak_2
+   57  nano rjesenje_3.txt
+   58  cd /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid
+   59  mkdir zadatak_4
+   60  cd zadatak_4
+   61  touch compress.sh
+   62  chmod +x compress.sh
+   63  cat > compress.sh << 'EOF'
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "Greška: potrebno je proslijediti točno 2 argumenta."
+    exit 1
+fi
+
+if [ ! -d "$1" ]; then
+    echo "Greška: direktorij za komprimiranje ne postoji."
+    exit 2
+fi
+
+if [ -e "$2" ]; then
+    echo "Greška: izlazna datoteka već postoji."
+    exit 3
+fi
+
+zip -j -r "$2" "$1"
+
+if [ $? -eq 0 ]; then
+    echo "Arhiva je uspješno stvorena."
+else
+    echo "Greška pri komprimiranju."
+    exit 4
+fi
+EOF
+
+   64  ./compress.sh /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid/zadatak_2 /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid/zadatak_4/arhiva.zip
+   65  cat > rjesenje_4.txt << 'EOF'
+touch compress.sh
+chmod +x compress.sh
+cat > compress.sh << 'EOF2'
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "Greška: potrebno je proslijediti točno 2 argumenta."
+    exit 1
+fi
+
+if [ ! -d "$1" ]; then
+    echo "Greška: direktorij za komprimiranje ne postoji."
+    exit 2
+fi
+
+if [ -e "$2" ]; then
+    echo "Greška: izlazna datoteka već postoji."
+    exit 3
+fi
+
+zip -j -r "$2" "$1"
+
+if [ $? -eq 0 ]; then
+    echo "Arhiva je uspješno stvorena."
+else
+    echo "Greška pri komprimiranju."
+    exit 4
+fi
+EOF2
+chmod +x compress.sh
+./compress.sh /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid/zadatak_2 /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid/zadatak_4/arhiva.zip
+EOF
+
+   66  cat rjesenje_4.txt
+   67  cd /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid
+   68  history > history.txt
