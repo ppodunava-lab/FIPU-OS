@@ -1,4 +1,0 @@
-touch skripta.sh
-chmod +x skripta.sh
-nano skripta.sh
-./skripta.sh /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid/zadatak_2

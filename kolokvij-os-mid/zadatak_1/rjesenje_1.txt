@@ -1,8 +1,0 @@
-cp src/module1.py tests/test_module1.py
-cp src/module2.py tests/test_module2.py
-mv main.py src/
-touch .gitignore
-echo "*.pyc" > .gitignore
-echo "HOST-$HOSTNAME" > src/.env
-ls -laht
-rm -f tests/*
