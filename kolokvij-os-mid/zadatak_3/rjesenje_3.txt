@@ -1,0 +1,23 @@
+mkdir lokalni_git
+cd lokalni_git
+git init
+git config user.name "Petra Podunavac"
+git config user.email "ppodunava@unipu.hr"
+ls -la
+echo "# Lokalni Git lab" > README.md
+echo "Prva verzija biljeski" > notes.txt
+cat README.md
+cat notes.txt
+git add README.md notes.txt
+git status -s
+git commit -m "Dodane pocetne datoteke"
+echo "Druga verzija biljeski" >> notes.txt
+rm README.md
+git add .
+git status -s
+git commit -m "Azurirane biljeske i obrisan README"
+git log --oneline
+git checkout HEAD~1
+ls 
+git checkout master
+ls

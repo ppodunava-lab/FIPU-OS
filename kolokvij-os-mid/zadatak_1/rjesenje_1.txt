@@ -1,0 +1,29 @@
+mkdir server_lab
+cd server_lab
+mkdir logs configs
+touch logs/app_01.log
+touch logs/app_02.log
+touch logs/db_01.log
+touch logs/db_02.log
+touch logs/proxy.log
+touch configs/app.conf
+touch configs/cache.conf
+touch configs/db.conf
+touch configs/proxy.conf
+touch configs/worker.conf
+touch admin.txt
+echo "ime: Petra" > admin.txt
+echo "prezime: Podunavac" >> admin.txt
+echo "JMBAG: 0122095342" >> admin.txt
+cat admin.txt
+mkdir backup_configs
+cp configs/app.conf backup_configs/app_backup.conf
+cp configs/db.conf backup_configs/db_backup.conf
+touch .logs_notes.txt .configs_notes.txt
+ls -lAR
+mkdir .privatno
+cd .privatno
+mv ../. logs_notes.txt .
+mv /mnt/c/Users/Administrator/Documents/GitHub/FIPU-OS/kolokvij-os-mid/zadatak_1/server_lab/ . configs_notes.txt .
+cd ../logs
+rm -iv app_*.log
