@@ -1,0 +1,6 @@
+Naredba za ispis povijesti commitova je git log.
+
+Zastavica za obrnuti redoslijed je --reverse.
+
+Prvi commit:
+e83c516 Initial revision of "git", the information manager from hell
