@@ -1,0 +1,31 @@
+ZADATAK 2
+
+U ovom zadatku napravila sam dva direktorija, old_dir i new_dir. U old_dir sam dodala 5 tekstualnih datoteka koje sam kasnije pomoću skripte prebacivala u new_dir.
+
+Napisala sam bash skriptu pod nazivom premjestiti.sh. Skripta prolazi kroz sve datoteke u old_dir direktoriju, prebacuje ih u new_dir i nakon svake prebačene datoteke ispiše poruku:
+
+Datoteka prebacena: datoteka1.txt (i sve ostale datoteke)
+
+U skripti se koristi sleep 1, pa se nakon svake prebačene datoteke pričeka jedna sekunda.
+
+Kod prvog pokretanja skripta nije imala dozvolu za izvršavanje, pa sam joj dodala dozvolu naredbom:
+
+chmod +x premjestiti.sh
+
+Nakon toga sam je pokrenula naredbom:
+
+./premjestiti.sh
+
+Skripta je tada ispisala poruku za svih 5 tekstualnih datoteka i prebacila ih iz old_dir u new_dir.
+
+Nakon toga sam skriptu pokrenula s različitim nice vrijednostima:
+
+nice -n 0 ./premjestiti.sh
+nice -n 10 ./premjestiti.sh
+sudo nice -n -10 ./premjestiti.sh
+
+Nice vrijednost 0 predstavlja zadani prioritet. Nice vrijednost 10 znači da proces ima manji prioritet, dok nice vrijednost -10 znači da proces ima veći prioritet od zadanog. Za negativnu nice vrijednost koristila sam sudo.
+
+Proces sam provjerila u htop alatu. Kod pokretanja s nice -n 10 u htopu se vidjela skripta /bin/bash ./premjestiti.sh i sleep procesi, a u stupcu NI bila je prikazana vrijednost 10.
+
+Kako se proces sa sleep 1 prebrzo završavao, za screenshot u htopu privremeno sam povećala čekanje na sleep 20. Nakon provjere skriptu sam vratila na sleep 1.

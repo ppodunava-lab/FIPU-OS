@@ -1,0 +1,32 @@
+ZADATAK 1
+
+Za ovaj zadatak prvo sam instalirala python3 i napravila direktorij python3 u svom home direktoriju. U njemu sam napravila datoteku hello.py.
+
+
+U skripti sam napisala program koji prvo ispiše "Hello World!", zatim pričeka 100 sekundi i nakon toga ispiše "Goodbye World!".
+
+Skriptu sam pokrenula u pozadini naredbom:
+
+python3 hello.py &
+
+Nakon pokretanja provjerila sam PID procesa naredbom:
+
+pgrep -f hello.py
+
+Zatim sam otvorila htop i pronašla pokrenuti python3 proces, odnosno skriptu hello.py.
+
+U htopu se za svaki proces vide osnovne informacije, kao što su PID procesa, korisnik koji ga je pokrenuo, prioritet, nice vrijednost, zauzeće memorije, trenutno stanje procesa, korištenje CPU-a i naredba kojom je proces pokrenut.
+
+Moj proces je uglavnom bio u stanju S, što znači da je čekao. To ima smisla jer se u skripti koristi time.sleep(100), pa program neko vrijeme miruje prije nego nastavi s izvođenjem.
+
+Proces sam mogla prekinuti pomoću naredbe kill. Mogu se koristiti ove naredbe:
+
+kill PID
+kill -15 PID
+kill -9 PID
+
+U terminal se ne upisuje doslovno riječ PID, nego stvarni broj procesa. Kod mene je stvarni PID procesa bio 2087, pa je ispravna naredba bila:
+
+kill 2087
+
+Naredba kill PID ili kill -15 PID šalje procesu zahtjev da se normalno prekine, dok kill -9 PID prisilno prekida proces.

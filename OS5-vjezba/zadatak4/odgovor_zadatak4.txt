@@ -1,0 +1,35 @@
+ZADATAK 4
+
+U ovom zadatku trebalo je za zadane znakovne dozvole napisati oktalni oblik i objasniti što pojedina dozvola znači.
+
+Dozvole sam računala prema pravilima:
+
+r = 4
+w = 2
+x = 1
+- = 0
+
+Prva tri znaka odnose se na vlasnika, druga tri na grupu, a zadnja tri na ostale korisnike.
+
+rwxr-xr-x = 755
+Vlasnik može čitati, pisati i izvršavati. Grupa može čitati i izvršavati. Ostali korisnici mogu čitati i izvršavati.
+
+rw-r--r-- = 644
+Vlasnik može čitati i pisati. Grupa može samo čitati. Ostali korisnici mogu samo čitati.
+
+rwx------ = 700
+Vlasnik može čitati, pisati i izvršavati. Grupa ne može čitati, pisati ni izvršavati. Ostali korisnici ne mogu čitati, pisati ni izvršavati.
+
+rw-rw-r-- = 664
+Vlasnik može čitati i pisati. Grupa može čitati i pisati. Ostali korisnici mogu samo čitati.
+
+rwxrwxrwx = 777
+Svi mogu čitati, pisati i izvršavati.
+
+r--r--r-- = 444
+Svi mogu samo čitati. Nitko ne može pisati ni izvršavati.
+
+rw------- = 600
+Vlasnik može čitati i pisati. Grupa ne može čitati, pisati ni izvršavati. Ostali korisnici ne mogu čitati, pisati ni izvršavati.
+
+Dozvole sam dodatno provjerila u Ubuntu Serveru pomoću chmod naredbi i prikaza ls -l.
