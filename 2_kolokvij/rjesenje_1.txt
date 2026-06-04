@@ -1,0 +1,73 @@
+    1  sudo apt update
+    2  sudo apt install openssh-server -y
+    3  sudo systemctl status ssh.socket
+    4  q
+    5  sudo loadkeys us
+    6  sudo ss -tulpn | grep ssh
+    7  sudo systemctl restart ssh.socket
+    8  ip a
+    9  sudo systemctl status ssh.socket
+   10  sudo apt install openssh-server -y
+   11  sudo systemctl status ssh.socket
+   12  ip a
+   13  q
+   14  scp lokalna_datoteka.txt petra_podunavac@10.122.65.221:/home/petra_podunavac/
+   15  ls -l /home/petra_podunavac/lokalna_datoteka.txt
+   16  cat /home/petra_podunavac/lokalna_datoteka.txt
+   17  history | tail -n 80 > /home/petra_podunavac/naredbe_vm_zadatak1.txt
+   18  cat /home/petra_podunavac/naredbe_vm_zadatak1.txt
+   19  history | tail -n 20 > /home/petra_podunavac/vm1.txt
+  253  cat naredbe_vm_zadatak1.txt
+  254  nano naredbe_vm_zadatak1.txt
+  255  cat naredbe_vm_zadatak1.txt naredbe_wsl_zadatak1.txt > rjesenje_1.txt
+  256  nano rjesenje_1.txt
+  257  cat rjesenje_1.txt
+  258  scp petra_podunavac@192.168.5.108:/home/petra_podunavac/naredbe_vm_zadatak2.txt .
+  259  nano naredbe_vm_zadatak2.txt
+  260  scp petra_podunavac@192.168.5.108:/home/petra_podunavac/naredbe_vm_zadatak2.txt .
+  261  nano naredbe_vm_zadatak2.txt
+  262  scp petra_podunavac@192.168.5.108:/home/petra_podunavac/naredbe_vm_zadatak2.txt .
+  263  ls -l naredbe_vm_zadatak2.txt
+  264  cat naredbe_vm_zadatak2.txt
+  265  ls -l naredbe_vm_zadatak2.txt
+  266  cat naredbe_vm_zadatak2.txt
+  267  rm -f naredbe_vm_zadatak2.txt
+  268  scp petra_podunavac@192.168.5.108:/home/petra_podunavac/naredbe_vm_zadatak2.txt naredbe_vm_zadatak2_novo.txt
+  269  cat naredbe_vm_zadatak2_novo.txt
+  270  rm -f proba.txt naredbe_vm_zadatak2.txt naredbe_vm_zadatak2_novo.txt
+  271  scp petra_podunavac@192.168.5.108:/home/petra_podunavac/proba.txt .
+  272  ls -l proba.txt
+  273  cat proba.txt
+  274  cp proba.txt rjesenje_2.txt
+  275  nano rjesenje_2.txt
+  276  cat rjesenje_2.txt
+  277  cd /mnt/c/users/administrator/documents/github/fipu-os
+  278  mkdir -p 2_kolokvij
+  279  cd 2_kolokvij
+  280  echo "Ovo je testna datoteka za scp prijenos." > lokalna_datoteka.txt
+  281  cat lokalna_datoteka.txt
+  282  ssh petra_podunavac@127.0.0.1
+  283  ssh petra_podunavac@10.122.65.221
+  284  scp petra_podunavac@10.122.65.221:/home/petra_podunavac/naredbe_vm_zadatak1.txt .
+  285  history | tail -n 50 > naredbe_wsl_zadatak1.txt
+  286  cat naredbe_vm_zadatak1.txt naredbe_wsl_zadatak1.txt > rjesenje_1.txt
+  287  rm -f naredbe_vm_zadatak1.txt
+  288  ssh petra_podunavac@10.122.65.221 "cat /home/petra_podunavac/naredbe_vm_zadatak1.txt" > naredbe_vm_zadatak1.txt
+  289  cat naredbe_vm_zadatak1.txt
+  290  history | tail -n 50 > naredbe_wsl_zadatak1.txt
+  291  cat naredbe_vm_zadatak1.txt naredbe_wsl_zadatak1.txt > rjesenje_1.txt
+  292  rm -f naredbe_vm_zadatak1.txt
+  293  ssh petra_podunavac@10.122.65.221 'cat /home/petra_podunavac/naredbe_vm_zadatak1.txt'
+  294  ssh petra_podunavac@10.122.65.221 'cat /home/petra_podunavac/naredbe_vm_zadatak1.txt' | tee naredbe_vm_zadatak1.txt
+  295  cat naredbe_vm_zadatak1.txt
+  296  nano rjesenje_1.txt
+  297  rm -f vm1.txt
+  298  scp petra_podunavac@10.122.65.221:/home/petra_podunavac/vm1.txt .
+  299  cat vm1.txt
+  300  cp vm1.txt rjesenje_1.txt
+  301  nano rjesenje_1.txt
+  302  history | tail -n 50 > wsl1.txt
+
+SSH je pokrenut pomoću ssh.socket. Status SSH-a provjeren je naredbom systemctl status, a iz tog prikaza izlazi se tipkom q. SSH koristi port 22. IP adresa Ubuntu Servera bila je 10.122.65.221. Datoteka lokalna_datoteka.txt kopirana je s lokalnog sustava na Ubuntu Server pomoću scp naredbe.
+
+Drugi način spajanja može se napraviti preko NAT mrežnog adaptera i port forwardinga u VirtualBoxu. Tada se lokalni port na računalu proslijedi na port 22 Ubuntu Servera, pa se na server može spojiti preko localhosta i odabranog porta.

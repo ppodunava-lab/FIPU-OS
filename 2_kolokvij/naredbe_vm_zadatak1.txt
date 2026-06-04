@@ -1,0 +1,17 @@
+    1  sudo apt update
+    2  sudo apt install openssh-server -y
+    3  sudo systemctl status ssh.socket
+    4  q
+    5  sudo loadkeys us
+    6  sudo ss -tulpn | grep ssh
+    7  sudo systemctl restart ssh.socket
+    8  ip a
+    9  sudo systemctl status ssh.socket
+   10  sudo apt install openssh-server -y
+   11  sudo systemctl status ssh.socket
+   12  ip a
+   13  q
+   14  scp lokalna_datoteka.txt petra_podunavac@10.122.65.221:/home/petra_podunavac/
+   15  ls -l /home/petra_podunavac/lokalna_datoteka.txt
+   16  cat /home/petra_podunavac/lokalna_datoteka.txt
+   17  history | tail -n 80 > /home/petra_podunavac/naredbe_vm_zadatak1.txt

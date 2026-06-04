@@ -1,0 +1,28 @@
+    1  sudo apt update
+    2  apt list --upgradeable
+    3  sudo apt upgrade -y
+    4  sudo apt install speedtest-cli -y
+    5  speedtest-cli
+    6  speedtest-cli > /home/petra_podunavac/brzina_neta.txt
+    7  sudo apt install speedtest-cli -y
+    8  speedtest-cli > /home/petra_podunavac/brzina_neta.txt
+    9  cat /home/petra_podunavac/brzina_neta.txt
+   10  chmod 600 /home/petra_podunavac/brzina_neta.txt
+   11  ls -l /home/petra_podunavac/brzina_neta.txt
+   12  history > /home/petra_podunavac/vm2.txt
+
+
+    1  scp petra_podunavac@10.122.65.221:/home/petra_podunavac/vm2.txt .
+    2  cat vm2.txt
+    3  history > wsl2.txt
+
+
+Dozvola 600 izračunata je ovako:
+
+rw- = 4 + 2 + 0 = 6
+--- = 0 + 0 + 0 = 0
+--- = 0 + 0 + 0 = 0
+
+Oktalna reprezentacija je 600.
+
+To znači da samo vlasnik može čitati i pisati datoteku, dok grupa i ostali korisnici nemaju nikakve dozvole.

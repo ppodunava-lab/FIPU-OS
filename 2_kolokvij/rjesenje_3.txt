@@ -1,0 +1,31 @@
+    1  cd ~
+    2  nano timer.sh
+    3  chmod +x time.sh
+    4  chmod +x timer.sh
+    5  ./timer.sh 5
+    6  sudo groupadd studenti
+    7  sudo useradd -m -g studenti -s /bin/bash leo
+    8  sudo passwd leo
+    9  id leo
+   10  grep studenti /etc/group
+   11  sudo chown petra_podunavac:studenti timer.sh
+   12  chmod 750 timer.sh
+   13  ls -l timer.sh
+   14  su - leo
+   15  whoami
+   16  grep leo /etc/passwd
+   17  history > /home/petra_podunavac/vm3.txt
+    1  scp petra_podunavac@10.122.65.221:/home/petra_podunavac/vm3.txt .
+    2  cat vm3.txt
+    3  history > wsl3.txt
+ Dozvola 750 izračunata je ovako:
+
+rwx = 4 + 2 + 1 = 7
+r-x = 4 + 0 + 1 = 5
+--- = 0 + 0 + 0 = 0
+
+Oktalna reprezentacija je 750.
+
+Vlasnik može čitati, pisati i izvršavati timer.sh.
+Grupa studenti može čitati i izvršavati timer.sh, ali ne može pisati.
+Ostali korisnici nemaju nikakve dozvole.

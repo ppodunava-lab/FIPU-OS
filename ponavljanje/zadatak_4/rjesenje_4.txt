@@ -1,0 +1,11 @@
+    1  mkdir zadatak_4
+    2  cd zadatak_4
+    3  touch priprema_deploya.sh
+    4  mkdir izlaz
+    5  chmod +x priprema_deploya.sh
+    6  nano priprema_deploya.sh
+    7  cat priprema_deploya.sh
+    8  ./priprema_deploya.sh ../zadatak_2/deploy ./izlaz
+    9  ls -la
+   10  ls -laR izlaz
+   11  history > rjesenje_4.txt

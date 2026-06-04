@@ -1,0 +1,86 @@
+    1  pwd
+    2  mkdir zadatak_1
+    3  cd zadatak_1
+    4  mkdir server_lab
+    5  cd server_lab
+    6  mkdir logs configs
+    7  touch logs/app_01.log logs/app_02.log logs/db_01.log logs/db_02.log logs/proxy.log
+    8  touch configs/app.conf configs/cache.conf configs/db.conf configs/proxy.conf configs/worker.conf
+    9  touch admin.txt
+   10  echo "ime: Petra" > admin.txt
+   11  echo "prezime: Podunavac" >> admin.txt
+   12  echo "JMBAG: 0123456789" >> admin.txt
+   13  cat admin.txt
+   14  mkdir backup_configs
+   15  cp configs/app.conf backup_configs/app_backup.conf
+   16  cp configs/db.conf backup_configs/db_backup.conf
+   17  touch .logs_notes.txt .configs_notes.txt
+   18  ls -lAR --color=auto
+   19  mkdir .privatno
+   20  cd .privatno
+   21  mv ../.logs_notes.txt ../.configs_notes.txt .
+   22  cd ../logs
+   23  rm -i app_*.log
+   24  cd ..
+   25  history > rjesenje_1.txt
+    1  mkdir zadatak_2
+    2  cd zadatak_2
+    3  mkdir deploy
+    4  cd deploy
+    5  mkdir app static uploads backup
+    6  touch app/server.js app/router.js
+    7  touch static/main.css static/reset.css
+    8  touch uploads/cover.jpg uploads/profile.png
+    9  echo 'console.log("Petra Podunavac");' > app/server.js
+   10  cp -n app/server.js backup/
+   11  mv app/router.js app/router.locked.js
+   12  echo "zakljucano" > app/router.locked.js
+   13  cat app/router.locked.js
+   14  read upis
+   15  read ime_prezime
+   16  echo "# Podaci o studentu" > README.md
+   17  echo "- Ime i prezime: $ime_prezime" >> README.md
+   18  echo "- Godina upisa: $upis" >> README.md
+   19  echo "## Kraj" >> README.md
+   20  ls -latR --color=auto
+   21  cd ..
+   22  history > rjesenje_2.txt
+    1  cat rjesenje_2.txt
+    2  mkdir zadatak_3
+    3  cd zadatak_3
+    4  mkdir lokalni_git
+    5  cd lokalni_git
+    6  git init
+    7  ls -la
+    8  echo "# Lokalni Git lab" > README.md
+    9  echo "Prva verzija biljeski" > notes.txt
+   10  cat README.md
+   11  cat notes.txt
+   12  git add README.md notes.txt
+   13  git status -s
+   14  git commit -m "Dodane pocetne datoteke"
+   15  git config user.name "Petra Podunavac"
+   16  git config user.email "podunavac.petra@gmail.com"
+   17  git commit -m "Dodane pocetne datoteke"
+   18  echo "Druga verzija biljeski" >> notes.txt
+   19  rm README.md
+   20  git add -A
+   21  git status -s
+   22  git commit -m "Azurirane biljeske i obrisan README"
+   23  git log --oneline
+   24  ls
+   25  git checkout master
+   26  ls
+   27  cd ..
+   28  history > rjesenje_3.txt
+    1  mkdir zadatak_4
+    2  cd zadatak_4
+    3  touch priprema_deploya.sh
+    4  mkdir izlaz
+    5  chmod +x priprema_deploya.sh
+    6  nano priprema_deploya.sh
+    7  cat priprema_deploya.sh
+    8  ./priprema_deploya.sh ../zadatak_2/deploy ./izlaz
+    9  ls -la
+   10  ls -laR izlaz
+   11  history > rjesenje_4.txt

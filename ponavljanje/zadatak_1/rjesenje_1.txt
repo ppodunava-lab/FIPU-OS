@@ -1,0 +1,25 @@
+    1  pwd
+    2  mkdir zadatak_1
+    3  cd zadatak_1
+    4  mkdir server_lab
+    5  cd server_lab
+    6  mkdir logs configs
+    7  touch logs/app_01.log logs/app_02.log logs/db_01.log logs/db_02.log logs/proxy.log
+    8  touch configs/app.conf configs/cache.conf configs/db.conf configs/proxy.conf configs/worker.conf
+    9  touch admin.txt
+   10  echo "ime: Petra" > admin.txt
+   11  echo "prezime: Podunavac" >> admin.txt
+   12  echo "JMBAG: 0123456789" >> admin.txt
+   13  cat admin.txt
+   14  mkdir backup_configs
+   15  cp configs/app.conf backup_configs/app_backup.conf
+   16  cp configs/db.conf backup_configs/db_backup.conf
+   17  touch .logs_notes.txt .configs_notes.txt
+   18  ls -lAR --color=auto
+   19  mkdir .privatno
+   20  cd .privatno
+   21  mv ../.logs_notes.txt ../.configs_notes.txt .
+   22  cd ../logs
+   23  rm -i app_*.log
+   24  cd ..
+   25  history > rjesenje_1.txt

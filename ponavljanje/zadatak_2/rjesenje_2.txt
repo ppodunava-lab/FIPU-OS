@@ -1,0 +1,22 @@
+    1  mkdir zadatak_2
+    2  cd zadatak_2
+    3  mkdir deploy
+    4  cd deploy
+    5  mkdir app static uploads backup
+    6  touch app/server.js app/router.js
+    7  touch static/main.css static/reset.css
+    8  touch uploads/cover.jpg uploads/profile.png
+    9  echo 'console.log("Petra Podunavac");' > app/server.js
+   10  cp -n app/server.js backup/
+   11  mv app/router.js app/router.locked.js
+   12  echo "zakljucano" > app/router.locked.js
+   13  cat app/router.locked.js
+   14  read upis
+   15  read ime_prezime
+   16  echo "# Podaci o studentu" > README.md
+   17  echo "- Ime i prezime: $ime_prezime" >> README.md
+   18  echo "- Godina upisa: $upis" >> README.md
+   19  echo "## Kraj" >> README.md
+   20  ls -latR --color=auto
+   21  cd ..
+   22  history > rjesenje_2.txt

@@ -1,0 +1,28 @@
+    1  cat rjesenje_2.txt
+    2  mkdir zadatak_3
+    3  cd zadatak_3
+    4  mkdir lokalni_git
+    5  cd lokalni_git
+    6  git init
+    7  ls -la
+    8  echo "# Lokalni Git lab" > README.md
+    9  echo "Prva verzija biljeski" > notes.txt
+   10  cat README.md
+   11  cat notes.txt
+   12  git add README.md notes.txt
+   13  git status -s
+   14  git commit -m "Dodane pocetne datoteke"
+   15  git config user.name "Petra Podunavac"
+   16  git config user.email "podunavac.petra@gmail.com"
+   17  git commit -m "Dodane pocetne datoteke"
+   18  echo "Druga verzija biljeski" >> notes.txt
+   19  rm README.md
+   20  git add -A
+   21  git status -s
+   22  git commit -m "Azurirane biljeske i obrisan README"
+   23  git log --oneline
+   24  ls
+   25  git checkout master
+   26  ls
+   27  cd ..
+   28  history > rjesenje_3.txt

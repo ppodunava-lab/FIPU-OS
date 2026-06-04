@@ -1,0 +1,100 @@
+ZADATAK 4
+
+1. -rwxr-x---
+
+Radi se o datoteci jer zapis počinje znakom -.
+
+Dozvole:
+vlasnik: rwx = 4 + 2 + 1 = 7
+grupa: r-x = 4 + 0 + 1 = 5
+ostali: --- = 0 + 0 + 0 = 0
+
+Oktalna reprezentacija: 750
+
+Vlasnik može čitati, pisati i izvršavati datoteku.
+Grupa može čitati i izvršavati datoteku, ali ne može pisati.
+Ostali korisnici ne mogu čitati, pisati ni izvršavati datoteku.
+
+
+2. drw-r--r--
+
+Radi se o direktoriju jer zapis počinje znakom d.
+
+Dozvole:
+vlasnik: rw- = 4 + 2 + 0 = 6
+grupa: r-- = 4 + 0 + 0 = 4
+ostali: r-- = 4 + 0 + 0 = 4
+
+Oktalna reprezentacija: 644
+
+Vlasnik može čitati i pisati u direktorij, ali ne može ulaziti u njega jer nema x dozvolu.
+Grupa može samo čitati.
+Ostali korisnici mogu samo čitati.
+
+
+3. -rwxrwxrwx
+
+Radi se o datoteci jer zapis počinje znakom -.
+
+Dozvole:
+vlasnik: rwx = 4 + 2 + 1 = 7
+grupa: rwx = 4 + 2 + 1 = 7
+ostali: rwx = 4 + 2 + 1 = 7
+
+Oktalna reprezentacija: 777
+
+Svi mogu čitati, pisati i izvršavati datoteku.
+
+
+4. -r--r--r--
+
+Radi se o datoteci jer zapis počinje znakom -.
+
+Dozvole:
+vlasnik: r-- = 4 + 0 + 0 = 4
+grupa: r-- = 4 + 0 + 0 = 4
+ostali: r-- = 4 + 0 + 0 = 4
+
+Oktalna reprezentacija: 444
+
+Svi mogu samo čitati datoteku.
+Nitko ne može pisati ni izvršavati datoteku.
+
+
+5. -r-xr-xr--
+
+Radi se o datoteci jer zapis počinje znakom -.
+
+Dozvole:
+vlasnik: r-x = 4 + 0 + 1 = 5
+grupa: r-x = 4 + 0 + 1 = 5
+ostali: r-- = 4 + 0 + 0 = 4
+
+Oktalna reprezentacija: 554
+
+Vlasnik može čitati i izvršavati datoteku, ali ne može pisati.
+Grupa može čitati i izvršavati datoteku, ali ne može pisati.
+Ostali korisnici mogu samo čitati datoteku.
+
+
+Tekstualne reprezentacije oktalnih dozvola:
+
+755 = rwxr-xr-x
+
+vlasnik: 7 = 4 + 2 + 1 = rwx
+grupa: 5 = 4 + 0 + 1 = r-x
+ostali: 5 = 4 + 0 + 1 = r-x
+
+
+644 = rw-r--r--
+
+vlasnik: 6 = 4 + 2 + 0 = rw-
+grupa: 4 = 4 + 0 + 0 = r--
+ostali: 4 = 4 + 0 + 0 = r--
+
+
+700 = rwx------
+
+vlasnik: 7 = 4 + 2 + 1 = rwx
+grupa: 0 = 0 + 0 + 0 = ---
+ostali: 0 = 0 + 0 + 0 = ---

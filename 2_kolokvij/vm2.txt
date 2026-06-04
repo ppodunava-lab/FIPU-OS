@@ -1,0 +1,12 @@
+    1  sudo apt update
+    2  apt list --upgradeable
+    3  sudo apt upgrade -y
+    4  sudo apt install speedtest-cli -y
+    5  speedtest-cli
+    6  speedtest-cli > /home/petra_podunavac/brzina_neta.txt
+    7  sudo apt install speedtest-cli -y
+    8  speedtest-cli > /home/petra_podunavac/brzina_neta.txt
+    9  cat /home/petra_podunavac/brzina_neta.txt
+   10  chmod 600 /home/petra_podunavac/brzina_neta.txt
+   11  ls -l /home/petra_podunavac/brzina_neta.txt
+   12  history > /home/petra_podunavac/vm2.txt
